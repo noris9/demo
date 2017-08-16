@@ -1,0 +1,154 @@
+@import "mix.scss";
+
+* {
+  /*box-sizing: inherit; ??*/
+
+}
+
+.pn-ProductNav_Wrapper {
+  //display: flex;
+  //align-items: flex-start;
+  padding-top: 10px;
+  //margin-top: 1rem;
+  position: relative;
+  margin-right: -1rem;
+  //max-width: $col-11;
+  //margin-left: $col-1;
+
+  //@media (min-width: $size-l) {
+  //  margin-left: 0;
+  //  max-width: 100%;
+  //}
+}
+
+.pn-ProductNav {
+  /* Make this scrollable when needed */
+  overflow-x: auto;
+  /* We don't want vertical scrolling */
+  overflow-y: hidden;
+  /* For WebKit implementations, provide inertia scrolling */
+  -webkit-overflow-scrolling: touch;
+  /* We don't want internal inline elements to wrap */
+  white-space: nowrap;
+  /* If JS present, let's hide the default scrollbar */
+  .js & {
+    /* Make an auto-hiding scroller for the 3 people using a IE */
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    /* Remove the default scrollbar for WebKit implementations */
+    &::-webkit-scrollbar {
+      display: none;
+    }
+  }
+  /* positioning context for advancers */
+  position: relative;
+  // Crush the whitespace here
+  font-size: 0;
+
+  //@media (min-width: 960px) {
+  //  overflow-x: hidden;
+  //}
+}
+
+.pn-ProductNav {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+    float: none;
+  }
+}
+
+.pn-ProductNav_Contents {
+  transition: transform .2s ease-in-out;
+}
+
+.pn-ProductNav_Contents-no-transition {
+  transition: none;
+}
+
+.braker {
+  display: inline-block;
+  width: 2rem;
+}
+
+.pn-ProductNav_Link {
+  text-decoration: underline;
+  color: #537fff;
+  font-size: 1rem;
+  line-height: 22px;
+  display: inline-flex;
+  align-items: center;
+  border: 1px solid transparent;
+
+  & + & {
+    border-left-color: #eee;
+  }
+  &[aria-selected="true"] {
+    color: #26282f;
+    text-decoration: none;
+
+    & ~ * {
+      opacity: 1;
+    }
+  }
+}
+
+.pn-Advancer {
+  /* Reset the button */
+  appearance: none;
+  height: 40px;
+  background: transparent;
+  padding: 0;
+  border: 0;
+  &:focus {
+    outline: 0;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+  /* Now style it as needed */
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  /* Set the buttons invisible by default */
+  opacity: 0;
+  transition: opacity .3s;
+}
+
+.pn-Advancer_Left {
+  left: -3px;
+  [data-overflowing="both"] ~ &,
+  [data-overflowing="left"] ~ & {
+    opacity: 1;
+  }
+}
+
+.pn-Advancer_Right {
+  right: -3px;
+  [data-overflowing="both"] ~ &,
+  [data-overflowing="right"] ~ & {
+    opacity: 1;
+  }
+}
+
+.pn-Advancer_Icon {
+  width: 20px;
+  height: 44px;
+  fill: #bbb;
+}
+
+.pn-ProductNav_Indicator {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 100px;
+  transform-origin: 0 0;
+  transition: transform .2s ease-in-out, background-color .2s ease-in-out;
+  background: #000;
+}
+
+.pnProductNavContents {
+
+}

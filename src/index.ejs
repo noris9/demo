@@ -1,0 +1,504 @@
+<!Doctype html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Букет столицы</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style><%- criticalStyle %></style>
+    <!--<link rel="stylesheet" href="/style/grid-system.css">-->
+    <link rel="icon" href="images/logo.ico" type="image/x-icon">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/css/perfect-scrollbar.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700|Roboto:300,400i,900,900i&amp;subset=cyrillic"
+          rel="stylesheet">
+</head>
+<body>
+<div class="wrapper">
+    <div class="sections">
+        <header class="header">
+            <div class="header__group header__top">
+                <a href="" class="header__logo">
+                    <img class="lazy" data-src="images/logo.png" alt="Букет столицы">
+                </a>
+                <section class="header__title">
+                    <h1 class="header__type">
+                        <span class="header__title-text js-header-title">Букеты цветов</span>
+                        <span class="header__title-count">
+                            (<span class="js-header-count">567</span>)
+                        </span>
+                    </h1>
+                    <a role="button" class="basket-icon" id="basket">Корзина</a>
+                </section>
+                <div class="pn-ProductNav_Wrapper">
+                    <nav id="pnProductNav" class="pn-ProductNav">
+                        <div id="pnProductNavContents" class="pn-ProductNav_Contents">
+                            <a href="#1" aria-selected="true" class="pn-ProductNav_Link js-set-title" data-count="543">Букеты
+                                цветов</a>
+                            <span class="braker"></span>
+                            <a href="#1" class="pn-ProductNav_Link js-set-title" data-count="234">Цветочные
+                                композиции</a>
+                            <span class="braker"></span>
+                            <a href="#1" class="pn-ProductNav_Link js-set-title" data-count="122">Комнатные растения</a>
+                            <span class="braker"></span>
+                            <a href="#1" class="pn-ProductNav_Link js-set-title" data-count="20">Мягкие игрушки</a>
+                            <span class="braker"></span>
+                            <a href="#1" class="pn-ProductNav_Link js-set-title" data-count="111">Открытки</a>
+                            <!--<span class="braker"></span>-->
+                            <span id="pnIndicator" class="pn-ProductNav_Indicator"></span>
+                        </div>
+                    </nav>
+                    <button id="pnAdvancerLeft" class="pn-Advancer pn-Advancer_Left" type="button">
+                        <svg class="pn-Advancer_Icon" viewBox="0 0 536 949" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-319.000000, -3779.000000)">
+                                    <g transform="translate(174.000000, 3660.000000)">
+                                        <polygon fill="#000000" fill-rule="nonzero"
+                                                 points="146.47 594 594.44 1067.817 680.297 986.644 270.697 553.414 270.697 634.586 680.297 201.356 594.44 120.18"></polygon>
+                                        <polygon fill="#fff"
+                                                 transform="translate(306.655559, 338.786253) rotate(-163.900000) translate(-306.655559, -338.786253) "
+                                                 points="390.247813 49.0725213 521.341071 505.192641 91.9700467 628.499983"></polygon>
+                                        <polygon fill="#fff"
+                                                 transform="translate(346.103713, 899.728764) rotate(-251.000000) translate(-346.103713, -899.728764) "
+                                                 points="424.497145 610.991437 570.028542 1034.40479 122.178884 1188.46609"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                    <button id="pnAdvancerRight" class="pn-Advancer pn-Advancer_Right" type="button">
+                        <svg class="pn-Advancer_Icon" viewBox="0 0 536 950" version="1.1"
+                             xmlns="http://www.w3.org/2000/svg">
+                            <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                                <g transform="translate(-306.000000, -3791.000000)">
+                                    <g transform="translate(640.687500, 4256.609375) rotate(-180.000000) translate(-640.687500, -4256.609375) translate(294.187500, 3653.609375)">
+                                        <polygon fill="#000000" fill-rule="nonzero"
+                                                 points="146.47 594 594.44 1067.817 680.297 986.644 270.697 553.414 270.697 634.586 680.297 201.356 594.44 120.18"></polygon>
+                                        <polygon fill="#fff"
+                                                 transform="translate(306.655559, 338.786253) rotate(-163.900000) translate(-306.655559, -338.786253) "
+                                                 points="390.247813 49.0725213 521.341071 505.192641 91.9700467 628.499983"></polygon>
+                                        <polygon fill="#fff"
+                                                 transform="translate(346.103713, 899.728764) rotate(-251.000000) translate(-346.103713, -899.728764) "
+                                                 points="424.497145 610.991437 570.028542 1034.40479 122.178884 1188.46609"></polygon>
+                                    </g>
+                                </g>
+                            </g>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </header>
+        <section id="content" class="content content__loading">
+            <form class="filter">
+                <div class="filter__wrapper">
+                    <select class="filter__field">
+                        <option value="1">до 30 см</option>
+                    </select>
+                    <select class="filter__field">
+                        <option value="1">от 3000 руб</option>
+                    </select>
+                    <select class="filter__field">
+                        <option value="1">по популярности</option>
+                    </select>
+
+                    <select class="filter__field">
+                        <option value="">Акции</option>
+                        <option value="">Розы</option>
+                        <option value="">Конусы</option>
+                        <option value="">Бизнес букеты</option>
+                    </select>
+                </div>
+            </form>
+            <div class="content__products">
+                <article class="product product__type-select">
+                    <aside class="product__photo">
+                        <img class="js-show-info lazy" data-src="images/products/flowers-1.jpg" alt="Сладкие сны"/>
+                        <div class="product__sale sale-icon sale-icon__type-red">
+                            <div class="sale-icon__value">
+                                −40<span class="sale-icon__percentages">%</span>
+                            </div>
+                            <div class="sale-icon__description">Только сегодня</div>
+                        </div>
+                    </aside>
+                    <aside class="product__description meta">
+                        <div class="meta__title js-show-info">Сладкие сны</div>
+                        <ul class="meta__stars stars">
+                            <li class="stars__item"></li>
+                            <li class="stars__item active"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                        </ul>
+                        <a class="meta__review js-show-info">34 отзыва</a>
+                        <p class="meta__info">
+                            Букет № 3478 <br>
+                            Ширина: 30 см. <br>
+                            Высота: 25 см.
+                        </p>
+                        <h3 class="meta__old-price">
+                        <span class="strikeout">
+                            2500
+                        </span>
+                        </h3>
+                        <button class="meta__add js-add-product" type="button">1&thinsp;500</button>
+                        <p class="meta__advantages">
+                            Цена с доставкой и <br>
+                            подарочной открыткой!
+                        </p>
+                    </aside>
+                    <div class="product__select selected-product">
+                        <h2 class="selected-product__title">Отличный выбор!</h2>
+                        <span class="selected-product__basket">Вы добавили товар в корзину</span>
+                        <a class="selected-product__order" role="button">Оформить заказ и доставку</a>
+                        <a class="selected-product__postcard" role="button">Подобрать открытку</a>
+                    </div>
+                </article>
+                <article class="product">
+                    <aside class="product__photo">
+                        <img class="js-show-info lazy" data-src="images/products/flowers-2.jpg" alt="Сладкие сны"/>
+                        <div class="product__sale sale-icon sale-icon__type-black">
+                            <div class="sale-icon__value">
+                                −40<span class="sale-icon__percentages">%</span>
+                            </div>
+                            <div class="sale-icon__description">Только сегодня</div>
+                        </div>
+                    </aside>
+                    <aside class="product__description meta">
+                        <div class="meta__title js-show-info">Сладкие сны</div>
+                        <ul class="meta__stars stars">
+                            <li class="stars__item"></li>
+                            <li class="stars__item active"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                        </ul>
+                        <a class="meta__review js-show-info">34 отзыва</a>
+                        <p class="meta__info">
+                            Букет № 3478 <br>
+                            Ширина: 30 см. <br>
+                            Высота: 25 см.
+                        </p>
+                        <h3 class="meta__old-price">
+                        <span class="strikeout">
+                            2500
+                        </span>
+                        </h3>
+                        <button class="meta__add js-add-product" type="button">1&thinsp;500</button>
+                        <p class="meta__advantages">
+                            Цена с доставкой и <br>
+                            подарочной открыткой!
+                        </p>
+                    </aside>
+                </article>
+                <article class="product">
+                    <aside class="product__photo">
+                        <img class="js-show-info lazy" data-src="images/products/flowers-3.jpg" alt="Сладкие сны"/>
+                        <div class="product__sale sale-icon sale-icon__type-black">
+                            <div class="sale-icon__value">
+                                −40<span class="sale-icon__percentages">%</span>
+                            </div>
+                            <div class="sale-icon__description">Только сегодня</div>
+                        </div>
+                    </aside>
+                    <aside class="product__description meta">
+                        <div class="meta__title js-show-info">Сладкие сны</div>
+                        <ul class="meta__stars stars">
+                            <li class="stars__item"></li>
+                            <li class="stars__item active"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                        </ul>
+                        <a class="meta__review js-show-info">34 отзыва</a>
+                        <p class="meta__info">
+                            Букет № 3478 <br>
+                            Ширина: 30 см. <br>
+                            Высота: 25 см.
+                        </p>
+                        <h3 class="meta__old-price">
+                        <span class="strikeout">
+                            2500
+                        </span>
+                        </h3>
+                        <button class="meta__add js-add-product" type="button">1&thinsp;500</button>
+                        <p class="meta__advantages">
+                            Цена с доставкой и <br>
+                            подарочной открыткой!
+                        </p>
+
+                    </aside>
+                </article>
+                <article class="product">
+                    <aside class="product__photo">
+                        <img class="js-show-info lazy" data-src="images/products/flowers-4.jpg" alt="Сладкие сны"/>
+                        <div class="product__sale sale-icon sale-icon__type-light-black">
+                            <div class="sale-icon__value">
+                                −10<span class="sale-icon__percentages">%</span>
+                            </div>
+                            <div class="sale-icon__description">Только сегодня</div>
+                        </div>
+                    </aside>
+                    <aside class="product__description meta">
+                        <div class="meta__title js-show-info">Сладкие сны</div>
+                        <ul class="meta__stars stars">
+                            <li class="stars__item"></li>
+                            <li class="stars__item active"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                        </ul>
+                        <a class="meta__review js-show-info">34 отзыва</a>
+                        <p class="meta__info">
+                            Букет № 3478 <br>
+                            Ширина: 30 см. <br>
+                            Высота: 25 см.
+                        </p>
+                        <h3 class="meta__old-price">
+                        <span class="strikeout">
+                            2500
+                        </span>
+                        </h3>
+                        <button class="meta__add js-add-product" type="button">1&thinsp;500</button>
+                        <p class="meta__advantages">
+                            Цена с доставкой и <br>
+                            подарочной открыткой!
+                        </p>
+
+                    </aside>
+                </article>
+            </div>
+        </section>
+        <footer class="footer">
+            <section class="footer__status footer__indent status">
+                <div class="status__item">
+                    <div class="status__row">Ваша корзина:</div>
+                    <div class="status__row">
+                        В корзинe 1 товар<br>
+                        на сумму 2920 руб.
+                    </div>
+                    <a href="" class="status__link">Оформить заказ</a>
+                </div>
+                <div class="status__item">
+                    <div class="status__row">Ваш менеджер:</div>
+                    <div class="status__manager">
+                        <div class="status__manager-photo">
+                            <img data-src="images/manager.png" class="lazy" alt="Жуков Дмитрий">
+                        </div>
+                        <div class="status__desc">
+                            <div class="status__row">Жуков <br> Дмитрий</div>
+                            <a class="status__questen">Задать вопрос</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="status__item">
+                    <div class="status__row">Место доставки:</div>
+                    <div class="status__row">
+                        <a href="" class="status__link">Казань</a>
+                    </div>
+                    <div>
+                        Ближайшее время <br>
+                        доставки в 14:40
+                    </div>
+
+                </div>
+            </section>
+
+            <section class="footer__contacts footer__indent contacts">
+                <a href="" class="contacts__link">О компании</a>
+                <a href="" class="contacts__link">Бонусы</a>
+                <a href="" class="contacts__link">Оплата</a>
+                <a href="" class="contacts__link">Доставка</a>
+                <a href="" class="contacts__link">Корпоративным клиентам</a>
+                <a href="" class="contacts__link">Доставка по России</a>
+                <br>
+                <a href="" class="contacts__link">Гарантия качества</a>
+                <a href="" class="contacts__link">Адреса магазинов</a>
+                <a href="" class="contacts__link">Адреса магазинов</a>
+                <a href="" class="contacts__link">Способы оплаты</a>
+            </section>
+
+            <section class="footer__static footer__indent">
+                <div class="footer__about about">
+                    <div class="about__copy">Copyright © 2001-2017, «ВЕЖАРИ»</div>
+                    <a href="" class="about__contact">МА «Жуков и Архангельский»</a>
+                </div>
+                <nav class="footer__social social">
+                    <a class="social__item social__fb" href="https://www.facebook.com/">facebook.com/</a>
+                    <a class="social__item social__vk" href="https://vk.com">vk.com</a>
+                    <a class="social__item social__yt" href="https://www.youtube.com">youtube.com</a>
+                    <a class="social__item social__in" href="https://www.instagram.com/">instagram.com/</a>
+                </nav>
+            </section>
+        </footer>
+    </div>
+    <section id="sidebar" class="sidebar custom-scroll">
+        <a href="" class="sidebar__logo">
+            <img data-src="images/logo.png" class="lazy" alt="Букет столицы">
+        </a>
+        <div class="field sidebar__indent">
+            <div class="field__label">Телефон: 777-77-77</div>
+            <div class="field__label">Место доставки:</div>
+            <div class="field__select">
+                <a href="" class="field__link">Казань</a>
+            </div>
+        </div>
+        <div class="sidebar__panel panel sidebar__indent">
+            <div class="panel__title">
+                Вы выбрали:
+            </div>
+            <div>
+                <div id="basket-wrapper">
+                    <div id="basket" class="basket append">
+                        <div class="basket__demo">
+                            <img data-src="images/products-demo.png" class="lazy" alt="Букет №0456">
+                        </div>
+                        <div class="basket__info">
+                            <div class="basket__name">Букет №0456</div>
+                            <div class="basket__price">1&thinsp;450&nbsp;₽</div>
+                            <a class="basket__clean-this" href="#">Убрать из корзины</a>
+                        </div>
+                    </div>
+                </div>
+                <button class="basket__button">Оформите заказ</button>
+                <div class="basket__desc">
+                    Ближайшее время <br>
+                    доставки в 14:40
+                </div>
+            </div>
+        </div>
+        <div class="sidebar__panel panel sidebar__indent">
+            <div class="panel__title">
+                Ваш менеджер:
+            </div>
+
+            <div class="manager">
+                <div class="manager__photo">
+                    <img data-src="images/manager.png" class="lazy" alt="Дмитрий Жуков">
+                </div>
+                <div class="manager__info">
+                    <div class="manager__status">на связи</div>
+                    <div class="manager__name">
+                        Дмитрий <br>
+                        Жуков
+                    </div>
+                </div>
+            </div>
+
+            <a href="" class="sidebar__link-button">Задать вопрос</a>
+        </div>
+
+        <nav class="sidebar__nav sidebar-menu sidebar__indent">
+            <a href="" class="sidebar-menu__item">О компании</a>
+            <a href="" class="sidebar-menu__item">Бонусы</a>
+            <a href="" class="sidebar-menu__item">Оплата</a>
+            <a href="" class="sidebar-menu__item">Доставка</a>
+            <a href="" class="sidebar-menu__item">Корпоративным клиентам</a>
+            <a href="" class="sidebar-menu__item">Доставка по России</a>
+            <a href="" class="sidebar-menu__item">Гарантия качества</a>
+            <a href="" class="sidebar-menu__item">Адреса магазинов</a>
+            <a href="" class="sidebar-menu__item">Способы оплаты</a>
+        </nav>
+    </section>
+</div>
+<div class="product-info" id="product-info">
+    <div class="product-info__wrapper">
+        <div class="product-info__header">
+            <h1 class="product-info__title">Ваш заказ</h1>
+            <a id="close" role="button" class="product-info__close">close</a>
+        </div>
+        <div class="product-info__view">
+            <div class="product-info__demo">
+                <div class="product-info__carousel">
+                    <div class="main-carousel">
+                        <div class="carousel-cell product-info__slide">
+                            <img class="product-info__photo lazy" data-src="images/products/flowers-1.jpg"
+                                 alt="Букет «сладкие сны»">
+                        </div>
+                        <div class="carousel-cell product-info__slide">
+                            <img class="product-info__photo lazy" data-src="images/products/flowers-2.jpg"
+                                 alt="Букет «сладкие сны»">
+                        </div>
+                        <div class="carousel-cell product-info__slide">
+                            <img class="product-info__photo lazy" data-src="images/products/flowers-3.jpg"
+                                 alt="Букет «сладкие сны»">
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-info__meta meta">
+                    <div class="meta__title">Сладкие сны</div>
+                    <ul class="meta__stars stars">
+                        <li class="stars__item"></li>
+                        <li class="stars__item active"></li>
+                        <li class="stars__item"></li>
+                        <li class="stars__item"></li>
+                        <li class="stars__item"></li>
+                    </ul>
+                    <a class="meta__review" href="">34 отзыва</a>
+                    <p class="meta__info">
+                        Букет № 3478 <br>
+                        Ширина: 30 см. <br>
+                        Высота: 25 см.
+                    </p>
+                    <h3 class="meta__old-price">
+                        <span class="strikeout">
+                            2500
+                        </span>
+                    </h3>
+                    <button class="meta__add  js-add-product" type="button">1&thinsp;500</button>
+                    <p class="meta__advantages">
+                        Цена с доставкой и <br>
+                        подарочной открыткой!
+                    </p>
+                </div>
+            </div>
+            <div class="product-info__shadow"></div>
+            <div class="product-info__content">
+                <nav class="tabs">
+                    <a href="" class="tabs__item active">Описание</a>
+                    <a href="" class="tabs__item">Состав</a>
+                </nav>
+                <p class="product-info__buket">
+                    Яркий букет из сотен ромашек для создания особенного, весеннего настроения. Это букет порадует
+                    романтичную особу и придаст ваше встрече незабываемую атмосферу свежести и свободы. Яркий букет из
+                    сотен ромашек для создания особенного, весеннего настроения. Это букет порадует романтичную особу и
+                    придаст ваше встрече незабываемую атмосферу свежести и свободы.
+                </p>
+                <div class="product-info__sub-title">Закажите с этим букетом</div>
+                <section class="associated">
+                    <div class="associated__item">
+                        <img class="associated__photo" src="images/rabbit.jpg" alt="rabbit">
+                    </div>
+                    <div class="associated__meta  meta">
+                        <div class="meta__title">Заяц №576</div>
+                        <ul class="stars">
+                            <li class="stars__item"></li>
+                            <li class="stars__item active"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                            <li class="stars__item"></li>
+                        </ul>
+                        <p class="meta__info">
+                            Букет № 3478 <br>
+                            Ширина: 30 см. <br>
+                            Высота: 25 см.
+                        </p>
+                        <button class="meta__add  js-add-product" type="button">1&thinsp;500</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script async src="lazyload.js?<%- version %>"></script>
+<script defer src="flickity.pkgd.min.js?<%- version %>"></script>
+<script defer src="https://cdnjs.cloudflare.com/ajax/libs/jquery.perfect-scrollbar/0.7.0/js/perfect-scrollbar.min.js"></script>
+<script defer src="scripts.js?<%- version %>"></script>
+
+
+</body>
+</html>
